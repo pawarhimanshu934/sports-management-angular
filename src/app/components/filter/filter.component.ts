@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef, Renderer2,AfterViewInit} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import {faFilter} from '@fortawesome/free-solid-svg-icons'
 
 @Component({
@@ -6,7 +6,7 @@ import {faFilter} from '@fortawesome/free-solid-svg-icons'
   templateUrl: './filter.component.html',
   styleUrls: ['./filter.component.css'],
 })
-export class FilterComponent implements OnInit,AfterViewInit {
+export class FilterComponent implements OnInit{
   
   categoryValue: string = 'None';
   faFilter=faFilter;
@@ -16,17 +16,10 @@ export class FilterComponent implements OnInit,AfterViewInit {
   @Input() categories: string[];
 
   @Output() filterValue = new EventEmitter<string>();
-
-  @ViewChild('btn') btn:ElementRef; 
-
-  constructor(private renderer : Renderer2) {
+  constructor() {
   }
 
-  ngAfterViewInit(): void {
-    this.renderer.listen(this.btn.nativeElement,'click',(event)=>{
-      this.renderer.setStyle(this.btn.nativeElement,'backgroundColor','red')
-    }) 
-  }
+
 
 
 

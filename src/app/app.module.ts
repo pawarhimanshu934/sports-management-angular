@@ -55,6 +55,10 @@ import { FeedbackListComponent } from './components/feedback-list/feedback-list.
 import { EventFeedbackComponent } from './pages/event-feedback/event-feedback.component';
 import { ChartsModule } from 'ng2-charts';
 import { AdminFeedbackComponent } from './pages/admin-feedback/admin-feedback.component';
+
+
+import { NgxUiLoaderModule,NgxUiLoaderHttpModule } from "ngx-ui-loader";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -101,6 +105,8 @@ import { AdminFeedbackComponent } from './pages/admin-feedback/admin-feedback.co
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireStorageModule,
     ChartsModule,
+    NgxUiLoaderModule,
+    NgxUiLoaderHttpModule.forRoot({ showForeground: true })
   ],
   providers: [
     {
