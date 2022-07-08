@@ -28,7 +28,7 @@
     "browser-image-resizer": "^2.2.0",
     "chart.js": "^2.9.4",
     "firebase": "^8.7.0",
-    "moment": "^2.29.1",
+    "moment": "^2.29.4",
     "ng2-charts": "^2.4.3",
     "ngx-toastr": "^14.0.0",
     "ngx-ui-loader": "^11.0.0",
